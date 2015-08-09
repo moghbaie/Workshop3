@@ -4,19 +4,19 @@ var myApp = angular.module('ServicesModule', []);
 
 myApp.factory('userpref',function(){
 
-	function userpref( songs) {
-		
-		this.songs=songs;
+	function userpref( name,age,type,songcheck) {
+		this.name=name;
+		this.age=age;
+		this.songcheck=songcheck;
 	}
-	userpref.prototype.addSong = function (song) {
-		this.songs.push(song);
+	userpref.prototype.addtype= function () {
 
-		if (this.user.age >18){
-			this.song.type=song.type; 
+		if (this.age >18){
+			this.type=type; 
 			}
 		else 
 			{
-			this.song.type='';}		
+			this.type='';}		
 	}
 
 	return userpref;
