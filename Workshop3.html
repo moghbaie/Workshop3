@@ -19,14 +19,13 @@
 			float:right;
 			margin:1em 20em 2em 1em;
 		}
-
 		</style>
 	</head>	
 <body ng-app='test01'>
 	<div ng-controller="MyController as ctrl">
 		<div>
-			<input  type="text" ng-model="ctrl.pref.name">
-			<input  type="number" ng-model="ctrl.pref.age">
+			<input  type="text" ng-model="ctrl.name">
+			<input  type="number" ng-model="ctrl.age">
 		</div>
 		
 		<div >
@@ -53,12 +52,12 @@
 
 		<div class="type">
 			 <label>
-			<input type="radio" name="type" ng-model="ctrl.song.type" value="Clean">
+			<input type="radio" name="type" ng-model="ctrl.type" value="Clean">
 			Clean
 		  </label><br/>
 	  
 		  <label>
-			<input type="radio" name="type" ng-model="ctrl.song.type" value="Explicit">
+			<input type="radio" name="type" ng-model="ctrl.type" value="Explicit">
 			Explicit
 		  </label><br/><br/>
 		</div>
@@ -66,14 +65,14 @@
 
 
 		<br/><button ng-click="ctrl.addPre(ctrl.song)">Save</button></br>
-			<label> Name: </label><span ng-bind="ctrl.pref.name"></span><br/>
-			<label> Age: </label><span ng-bind="ctrl.pref.age"></span><br/>
+			<label> Name: </label><span ng-bind="ctrl.name"></span><br/>
+			<label> Age: </label><span ng-bind="ctrl.age"></span><br/>
 
 
-			<label>Song list: </label><span ng-repeat="song in ctrl.song.list" ng-bind="song"></span><br/>
-			<label>Song Type: </label><span ng-bind="ctrl.song.type"></span>
+			<label>Song list: </label><span ng-repeat="song in ctrl.songcheck" ng-bind="song">{{song}}</span><br/>
+			<label>Song Type: </label><span ng-bind="ctrl.type"></span>
 			</div>
 		
 
 	</div>
-</body>															
+</body>					
