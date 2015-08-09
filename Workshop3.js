@@ -6,6 +6,7 @@ myApp.controller('MyController',function($scope,userpref){
 
 
   self.pref=new userpref(self.name, self.age, self.type, self.songcheck);
+  self.pref.addtype();
 
   self.songlist={
   Pop:[{SongName:'Black Space'},{SongName:'Mashup'}],
